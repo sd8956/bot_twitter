@@ -1,2 +1,4 @@
 python_dotenv~=0.13.0
- tweepy~=3.8.
+tweepy~=3.8.0
+celery~=4.4.6
+flower~=0.9.4
