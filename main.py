@@ -1,3 +1,9 @@
-from task import publish
+from bot import make_tweet
 
-publish.delay()
+
+def run():
+    make_tweet()
+
+
+if __name__ == "__main__":
+    run()

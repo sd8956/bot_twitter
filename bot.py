@@ -31,9 +31,8 @@ def search_sentence(text):
 
     while not (5 < status < 125):
         index = randint(0, len(text))
-
         init_index = text[index:].find(".") + 2 + index
-        last_index = text[init_index:].find(".")
+        last_index = text[init_index:].find(".") + 2 + index
         status = len(text[init_index:last_index])
 
     sentence = text[init_index:last_index]
@@ -46,6 +45,7 @@ def make_tweet():
     status = extract_status("texto.txt")
 
     try:
+        print(status)
         bot.update_status(status)
         print("Successfuly posted!")
     except tweepy.TweepError as e:
